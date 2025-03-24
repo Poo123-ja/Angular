@@ -1,4 +1,4 @@
-<div style="text-align:center">
-  <h1>{{ title }}</h1>
-  <img [src]="logoUrl" alt="BridgeLabz Logo" width="200px" />
-</div>
+<h1>{{ title }}</h1>
+
+<!-- Bind the click event to the method openBridgeLabzSite -->
+<img [src]="logoUrl" alt="BridgeLabz Logo" (click)="openBridgeLabzSite()" style="cursor: pointer" />
