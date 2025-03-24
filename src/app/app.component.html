@@ -1,12 +1,23 @@
-
 <div style="text-align: center;">
   <h1>{{title}}</h1>
   <a [href]="bridgeLabzUrl" target="_blank" rel="noopener noreferrer">
     <img [src]="logoUrl" alt="BridgeLabz Logo" width="200px">
   </a>
+  
 </div>
 
 <div style="text-align: center; margin-top: 20px;">
-  <input type="text" [value]="userName" (input)="onInputChange($event)" placeholder="Enter your name">
-  <p>Hello, {{ userName }} from BridgeLabz!</p>
+  <input 
+    type="text" 
+    [value]="userName" 
+    (input)="onInputChange($event)" 
+    placeholder="Enter your name"
+    style="padding: 10px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; width: 250px;"
+  />
+
+  <!-- Display error message if name validation fails -->
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
+  <!-- Display greeting message if userName is valid -->
+  <p *ngIf="userName">Hello, {{ userName }} from BridgeLabz!</p>
 </div>
