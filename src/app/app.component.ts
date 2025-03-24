@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Hello from BridgeLabz';  // The property for interpolation
+  title = 'Hello from BridgeLabz';
+  logoUrl = 'assets/images/BridgeLabz.jpg';  // Property holding the image URL
 }

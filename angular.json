@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular": {
+    "AngularIntro": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular",
+            "outputPath": "dist/angular-intro",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -23,7 +23,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets", 
+                "output": "/assets"
               }
             ],
             "styles": [
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Angular:build:production"
+              "buildTarget": "AngularIntro:build:production"
             },
             "development": {
-              "buildTarget": "Angular:build:development"
+              "buildTarget": "AngularIntro:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,6 +100,6 @@
     }
   },
   "cli": {
-    "analytics": "c44277a5-9ec2-4171-ba78-91446c4af7f0"
+    "analytics": "56001155-9d64-431d-8e53-81fb2d00fe04"
   }
 }
